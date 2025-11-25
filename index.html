@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susunan Bilik PROTAPAS 2025 - Full Images</title>
+    <style>
+        :root {
+            --yellow: #f1c40f; 
+            --orange: #e67e22; 
+            --green: #2ecc71;  
+            --blue: #3498db;   
+            --gray: #95a5a6;
+            --dark: #2c3e50;
+            --bg-row: #f4f6f7;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 30px;
+            color: #333;
+        }
+
+        .container { max-width: 1300px; margin: 0 auto; }
+
+        header { text-align: center; margin-bottom: 40px; }
+        
+        h1 { 
+            color: var(--dark); 
+            margin: 0; 
+            font-weight: 900; 
+            letter-spacing: -1px; 
+            text-transform: uppercase; 
+            font-size: 3.5rem; 
+        }
+        p.subtitle { color: #7f8c8d; margin-top: 5px; font-size: 1.4rem; }
+
+        /* --- TABLE STYLE --- */
+        .modern-table {
+            width: 100%;
+            border-collapse: separate; 
+            border-spacing: 0 12px; 
+        }
+
+        /* HEADER ZON */
+        .zon-header td {
+            padding: 18px;
+            color: white;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            border-radius: 50px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            font-size: 1.3rem;
+        }
+        .bg-zon-a { background: var(--yellow); }
+        .bg-zon-b { background: var(--orange); }
+        .bg-zon-c { background: var(--green); }
+        .bg-zon-d { background: var(--blue); }
+        .bg-zon-e { background: var(--gray); }
+
+        /* --- GAMBAR BESAR --- */
+        .merged-img-col {
+            background: transparent;
+            padding-right: 25px;
+            vertical-align: middle;
+            text-align: center;
+            border: none;
+            width: 180px;
+        }
+
+        .big-img {
+            width: 160px;
+            height: auto;
+            min-height: 120px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            border: 5px solid white;
+            cursor: pointer;
+            transition: transform 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+        .big-img:hover { transform: scale(1.03); }
+
+        /* Style khas untuk gambar Chalet R (sebab dia row kecik) */
+        .small-row-img {
+            width: 160px;
+            height: 100px; /* Fix height supaya tak panjang sangat */
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+            border: 5px solid white;
+            cursor: pointer;
+            transition: transform 0.3s;
+            display: block;
+            margin: 0 auto;
+        }
+        .small-row-img:hover { transform: scale(1.03); }
+
+        .single-img {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%; 
+            object-fit: cover;
+            border: 4px solid white; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+            cursor: pointer;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .zoom-hint {
+            font-size: 0.85rem;
+            color: #888;
+            margin-top: 8px;
+            font-style: italic;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* DATA PILLS */
+        .pill-cell {
+            background-color: var(--bg-row);
+            padding: 18px 25px;
+            vertical-align: middle;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .pill-start {
+            border-top-left-radius: 70px;
+            border-bottom-left-radius: 70px;
+            padding-left: 40px;
+            border-left: 1px solid #eee;
+        }
+        .pill-end {
+            border-top-right-radius: 70px;
+            border-bottom-right-radius: 70px;
+            padding-right: 40px;
+            border-right: 1px solid #eee;
+        }
+
+        /* Typography */
+        .room-name { 
+            font-weight: 800; 
+            color: var(--dark); 
+            font-size: 1.5rem;
+            margin-bottom: 4px;
+        }
+        .cat-text { color: #666; font-size: 1.1rem; }
+        
+        .status-icon {
+            display: flex;             
+            align-items: center;       
+            justify-content: center;   
+            width: 50px;
+            height: 50px; 
+            border-radius: 50%;
+            color: white; 
+            font-weight: bold; 
+            font-size: 22px;
+            padding: 0;                
+            margin: 0 auto;            
+        }
+        .icon-female { background-color: #e91e63; }
+        .icon-male { background-color: #2196f3; }
+        .icon-neutral { background-color: #9e9e9e; }
+        
+        .kapasiti-text { font-size: 1.3rem; font-weight: bold; }
+
+        .total-row td {
+            text-align: right;
+            padding: 15px 30px 25px 0;
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 1.3rem;
+            font-style: italic;
+        }
+
+        .grand-total-row td {
+            background-color: var(--dark);
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            font-size: 1.6rem;
+            font-weight: 800;
+            border-radius: 20px;
+            letter-spacing: 2px;
+            box-shadow: 0 6px 15px rgba(44, 62, 80, 0.4);
+            margin-top: 30px;
+        }
+
+        .footer-trademark {
+            margin-top: 40px;
+            text-align: center;
+            color: #333;
+        }
+        .footer-trademark p { margin: 6px 0; font-size: 1.3rem; }
+        .footer-trademark .credit {
+            font-size: 1.1rem;
+            color: #555;
+            font-family: monospace; 
+            font-weight: bold;
+            letter-spacing: 1.5px;
+        }
+
+        /* MODAL */
+        #imageModal { display: none; position: fixed; z-index: 999; padding-top: 50px; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.95); }
+        .modal-content { margin: auto; display: block; width: 90%; max-width: 1000px; animation: zoom 0.3s; border-radius: 10px; }
+        @keyframes zoom { from {transform:scale(0)} to {transform:scale(1)} }
+        .close { position: absolute; top: 20px; right: 40px; color: #fff; font-size: 50px; cursor: pointer; }
+
+        @media (max-width: 768px) {
+            .modern-table { display: block; }
+            tr { display: block; margin-bottom: 20px; }
+            td { display: block; text-align: left; padding: 15px; border: none; }
+            .merged-img-col { width: 100%; padding: 0 0 15px 0; }
+            .big-img, .small-row-img { width: 100%; max-width: 300px; height: 200px; } 
+            .pill-cell, .pill-start, .pill-end { border-radius: 0; background: #f9f9f9; padding: 20px; }
+            .pill-start { border-top-left-radius: 20px; border-top-right-radius: 20px; }
+            .pill-end { border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; border-bottom: 4px solid #ddd; }
+            h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>PROTAPAS 2025</h1>
+        <p class="subtitle">Senarai Bilik & Penginapan</p>
+    </header>
+
+    <table class="modern-table">
+        
+        <tr class="zon-header"><td colspan="5" class="bg-zon-a">ZON A: Urusetia Perempuan</td></tr>
+        
+        <tr>
+            <td rowspan="3" class="merged-img-col">
+                <img src="https://raw.githubusercontent.com/kamarul95-cloud/hostqamarul/refs/heads/main/IMG-20251125-WA0128.jpg" class="big-img" onclick="openModal(this)" alt="Chalet 1-3">
+                <div class="zoom-hint">Klik gambar</div>
+            </td>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Chalet 1</div>
+                <div class="cat-text">Urusetia Perempuan</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-female">P</div></td>
+            <td class="pill-cell kapasiti-text" align="center">7 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">-</td>
+        </tr>
+        <tr>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Chalet 2</div>
+                <div class="cat-text">Urusetia Perempuan</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-female">P</div></td>
+            <td class="pill-cell kapasiti-text" align="center">7 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">-</td>
+        </tr>
+        <tr>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Chalet 3</div>
+                <div class="cat-text">Urusetia Perempuan</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-female">P</div></td>
+            <td class="pill-cell kapasiti-text" align="center">7 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">-</td>
+        </tr>
+
+        <tr>
+            <td class="merged-img-col">
+                <img src="https://raw.githubusercontent.com/kamarul95-cloud/hostqamarul/refs/heads/main/IMG-20251125-WA0129.jpg" class="small-row-img" onclick="openModal(this)" alt="Chalet R">
+                <div class="zoom-hint">Klik gambar</div>
+            </td>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Chalet R</div>
+                <div class="cat-text">Urusetia Perempuan</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-female">P</div></td>
+            <td class="pill-cell kapasiti-text" align="center">3 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">Small</td>
+        </tr>
+        <tr class="total-row"><td colspan="5">Jumlah Zon A: 24 Orang</td></tr>
+
+        <tr class="zon-header"><td colspan="5" class="bg-zon-b">ZON B: Urusetia Lelaki</td></tr>
+
+        <tr>
+            <td rowspan="4" class="merged-img-col">
+                <img src="https://raw.githubusercontent.com/kamarul95-cloud/hostqamarul/refs/heads/main/IMG-20251125-WA0128.jpg" class="big-img" onclick="openModal(this)" alt="Chalet 4-7">
+                <div class="zoom-hint">Klik gambar</div>
+            </td>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Chalet 4</div>
+                <div class="cat-text">Urusetia Lelaki</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-male">L</div></td>
+            <td class="pill-cell kapasiti-text" align="center">6 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">-</td>
+        </tr>
+        <tr>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Chalet 5</div>
+                <div class="cat-text">Urusetia Lelaki</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-male">L</div></td>
+            <td class="pill-cell kapasiti-text" align="center">6 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">-</td>
+        </tr>
+        <tr>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Chalet 6</div>
+                <div class="cat-text">Urusetia Lelaki</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-male">L</div></td>
+            <td class="pill-cell kapasiti-text" align="center">6 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">-</td>
+        </tr>
+        <tr>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Chalet 7</div>
+                <div class="cat-text">Urusetia Lelaki</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-male">L</div></td>
+            <td class="pill-cell kapasiti-text" align="center">6 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">-</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2" class="merged-img-col">
+                <img src="https://raw.githubusercontent.com/kamarul95-cloud/hostqamarul/refs/heads/main/IMG-20251125-WA0131.jpg" class="big-img" onclick="openModal(this)" alt="Chalet 8-9">
+                <div class="zoom-hint">Klik gambar</div>
+            </td>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Chalet 8</div>
+                <div class="cat-text">Urusetia Lelaki</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-male">L</div></td>
+            <td class="pill-cell kapasiti-text" align="center">3 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">-</td>
+        </tr>
+        <tr>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Chalet 9</div>
+                <div class="cat-text">Urusetia Lelaki</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-male">L</div></td>
+            <td class="pill-cell kapasiti-text" align="center">3 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">-</td>
+        </tr>
+        <tr class="total-row"><td colspan="5">Jumlah Zon B: 30 Orang</td></tr>
+
+        <tr class="zon-header"><td colspan="5" class="bg-zon-c">ZON C: Dorm Perempuan</td></tr>
+        
+        <tr>
+            <td class="merged-img-col">
+                <img src="https://raw.githubusercontent.com/kamarul95-cloud/hostqamarul/refs/heads/main/IMG-20251125-WA0130.jpg" class="single-img" onclick="openModal(this)" alt="Dorm A">
+                <div class="zoom-hint">Klik gambar</div>
+            </td>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Dorm / Loft A</div>
+                <div class="cat-text">Peserta Perempuan</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-female">P</div></td>
+            <td class="pill-cell kapasiti-text" align="center">25 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">Dorm Besar</td>
+        </tr>
+        <tr>
+            <td class="merged-img-col">
+                <img src="https://raw.githubusercontent.com/kamarul95-cloud/hostqamarul/01ac5ade4f851f1059ee54843b7efe172a9fab57/IMG-20251125-WA0132.jpg" class="single-img" onclick="openModal(this)" alt="Dorm B">
+                <div class="zoom-hint">Klik gambar</div>
+            </td>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Dorm / Loft B</div>
+                <div class="cat-text">Peserta Perempuan</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-female">P</div></td>
+            <td class="pill-cell kapasiti-text" align="center">25 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">Dorm Besar</td>
+        </tr>
+        <tr class="total-row"><td colspan="5">Jumlah Zon C: 50 Orang</td></tr>
+
+        <tr class="zon-header"><td colspan="5" class="bg-zon-d">ZON D: Dorm Lelaki</td></tr>
+        
+        <tr>
+            <td class="merged-img-col">
+                <img src="https://raw.githubusercontent.com/kamarul95-cloud/hostqamarul/refs/heads/main/IMG-20251125-WA0133.jpg" class="single-img" onclick="openModal(this)" alt="Dorm C">
+                <div class="zoom-hint">Klik gambar</div>
+            </td>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Dorm / Loft C</div>
+                <div class="cat-text">Peserta Lelaki</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-male">L</div></td>
+            <td class="pill-cell kapasiti-text" align="center">25 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">Dorm Besar</td>
+        </tr>
+        <tr>
+            <td class="merged-img-col">
+                <img src="https://raw.githubusercontent.com/kamarul95-cloud/hostqamarul/refs/heads/main/IMG-20251125-WA0134.jpg" class="single-img" onclick="openModal(this)" alt="Dorm D">
+                <div class="zoom-hint">Klik gambar</div>
+            </td>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Dorm / Loft D</div>
+                <div class="cat-text">Peserta Lelaki</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-male">L</div></td>
+            <td class="pill-cell kapasiti-text" align="center">25 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">Dorm Besar</td>
+        </tr>
+        <tr class="total-row"><td colspan="5">Jumlah Zon D: 50 Orang</td></tr>
+
+        <tr class="zon-header"><td colspan="5" class="bg-zon-e">ZON E: Lain-lain</td></tr>
+        <tr>
+            <td class="merged-img-col">
+                <img src="https://placehold.co/200x200/95a5a6/white?text=H" class="single-img" onclick="openModal(this)" alt="Homestay">
+                <div class="zoom-hint">Klik gambar</div>
+            </td>
+            <td class="pill-cell pill-start">
+                <div class="room-name">Homestay</div>
+                <div class="cat-text">VIP / Umum</div>
+            </td>
+            <td class="pill-cell" align="center"><div class="status-icon icon-neutral">-</div></td>
+            <td class="pill-cell kapasiti-text" align="center">12 Orang</td>
+            <td class="pill-cell pill-end" align="center" style="color:#aaa">Rumah</td>
+        </tr>
+
+        <tr class="grand-total-row">
+            <td colspan="5">
+                JUMLAH KESELURUHAN: 166 ORANG
+            </td>
+        </tr>
+
+    </table>
+
+    <div class="footer-trademark">
+        <p>Disediakan oleh <strong>Unit Tempat Protapas 2025</strong></p>
+        <p class="credit">coding design by Qamarul</p>
+    </div>
+
+</div>
+
+<div id="imageModal" class="modal" onclick="closeModal()">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="imgExpanded">
+</div>
+
+<script>
+    function openModal(element) {
+        var modal = document.getElementById("imageModal");
+        var modalImg = document.getElementById("imgExpanded");
+        modal.style.display = "block";
+        modalImg.src = element.src;
+    }
+    function closeModal() {
+        document.getElementById("imageModal").style.display = "none";
+    }
+</script>
+
+</body>
+</html>
